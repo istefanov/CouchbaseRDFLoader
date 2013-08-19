@@ -22,5 +22,13 @@ To use the application you need to setup and run a Couchbase database server: ht
 
 This application reads an N-triples data set and converts it into JSON documents. 
 Each document has as an ID the subject of all triples bearing the same subject (a molecule). 
-Each document with such an ID consists of two JSON arrays, first one with the predicates, second one with the objects from the triples.
-When the triples are loaded into Couchbase we need to generate 3 indices (views).
+Each document with such an ID consists of two JSON arrays, first one with the predicates, 
+second one with the objects from the triples.
+
+When the triples are loaded into Couchbase we need to generate 3 indices (views). 
+The javascript code for the views is located in the views.txt document. 
+When creating the views in Couchbase, 
+locate each in a separate design document bearing the same name as the view indicated in the views.txt file. 
+The views creation will take some time up to some hours depending on the cluster configuration and available resources.
+
+After finishing loading and generating the views, you can proceed to qurying the data with the help of [CouchbaseRDF](https://github.com/istefanov/CouchbaseRDF).
