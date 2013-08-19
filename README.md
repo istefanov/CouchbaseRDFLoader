@@ -10,8 +10,8 @@ For the paper we have used 3 data sets:
  - BSBM 100M
  - DBpedia 100M
 
-You can generate the Berlin Benchmark datasets as described here: http://wifo5-03.informatik.uni-mannheim.de/bizer/berlinsparqlbenchmark/spec/BenchmarkRules/index.html#datagenerator 
-The DBpedia datasets can be found here: http://dbpedia.aksw.org/benchmark.dbpedia.org/
+You can generate the Berlin Benchmark datasets as described [here](http://wifo5-03.informatik.uni-mannheim.de/bizer/berlinsparqlbenchmark/spec/BenchmarkRules/index.html#datagenerator). 
+The DBpedia datasets can be downloaded from [here](http://dbpedia.aksw.org/benchmark.dbpedia.org/).
 The datasets are also available on the public Amazon Machine Image (AMI) with name: NoSQL-RDF-Couchbase, 
 which is loaded with data sets and runnable jars, so our experiemtns can be easily rerun.
 
