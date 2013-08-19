@@ -1,0 +1,33 @@
+PredObj
+
+function (doc, meta) {
+  if(doc[0] && doc[1]){
+    for(i=0;i<doc[0].length;i++){
+      //if(doc[1][i].length<100){
+        emit([doc[0][i],doc[1][i]],null);
+      //}
+    }
+  }
+}
+
+Obj
+
+function (doc, meta) {
+  if(doc[0] && doc[1]){
+    for(i=0;i<doc[0].length;i++){
+      //if(doc[1][i].length<100){
+        emit([doc[1][i]],doc[0][i]);
+      //}
+    }
+  }
+}
+
+Pred
+
+function (doc, meta) {
+  if(doc[0] && doc[1]){
+    for(i=0;i<doc[0].length;i++){
+      emit(doc[0][i],doc[1][i]);
+    }
+  }
+}
