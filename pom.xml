@@ -1,0 +1,118 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>CouchbaseRDFLoader</groupId>
+  <artifactId>CouchbaseRDFLoader</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>CouchbaseRDFLoader</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  
+  
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <dependency>
+      <groupId>couchbase</groupId>
+      <artifactId>couchbase-client</artifactId>
+      <version>1.1.0</version>
+    </dependency>
+    
+    <dependency>
+	  <groupId>com.google.code.gson</groupId>
+	  <artifactId>gson</artifactId>
+	  <version>2.2.2</version>
+    </dependency>
+    
+    <dependency>
+	  <groupId>net.sf.json-lib</groupId>
+	  <artifactId>json-lib</artifactId>
+	  <version>2.4</version>
+	  <classifier>jdk15</classifier>
+    </dependency>
+    
+    <dependency>
+    <groupId>org.semanticweb.yars</groupId>
+    <artifactId>nxparser</artifactId>
+    <version>1.2.3</version>
+    <exclusions>
+    	<exclusion>
+    		<artifactId>tools</artifactId>
+    		<groupId>com.sun</groupId>
+    	</exclusion>
+    </exclusions>
+  </dependency>
+  
+  <dependency>
+	<groupId>com.googlecode.json-simple</groupId>
+	<artifactId>json-simple</artifactId>
+	<version>1.1</version>
+  </dependency>
+  
+  <dependency>
+	<groupId>org.json</groupId>
+	<artifactId>json</artifactId>
+	<version>20090211</version>
+  </dependency>
+  
+  
+  <dependency>
+			<groupId>org.apache.jena</groupId>
+			<artifactId>jena-arq</artifactId>
+			<version>2.9.4</version>
+		</dependency>
+		
+  </dependencies>
+  
+  <repositories>
+  <repository>
+      <id>couchbase</id>
+      <name>Couchbase Maven Repository</name>
+      <layout>default</layout>
+      <url>http://files.couchbase.com/maven2/</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    
+    <repository>
+		<id>nxparser-repo</id>
+		<url>
+https://nxparser.googlecode.com/svn/repository
+</url>
+		<releases>
+			<enabled>true</enabled>
+			<updatePolicy>always</updatePolicy>
+			<checksumPolicy>fail</checksumPolicy>
+		</releases>
+		<snapshots>
+			<enabled>false</enabled>
+		</snapshots>
+	</repository>
+	<repository>
+		<id>nxparser-snapshots</id>
+		<url>
+https://nxparser.googlecode.com/svn/snapshots
+</url>
+		<releases>
+			<enabled>false</enabled>
+		</releases>
+		<snapshots>
+			<enabled>true</enabled>
+		</snapshots>
+	</repository>
+  </repositories>
+  
+</project>
